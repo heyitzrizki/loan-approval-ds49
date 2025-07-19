@@ -74,8 +74,8 @@ def predict(gender, married, dependent, education, self_employed, applicant_inco
     mar = 0 if married == "Yes" else 1
     edu = 0 if education == "Graduate" else 1
     sem = 0 if self_employed == "Yes" else 1
-    prop = 0 if property_area == "Semiurban" else 1 if property_are == "Urban" else 2
-                             
+    prop = 0 if property_area == "Semiurban" else 1 if property_area == "Urban" else 2
+                        
     #Making prediction
     prediction = Logistic_Regression_Model.predict(
     [[gen, 
